@@ -16,6 +16,12 @@
 					"include": "#block_comment"
 				},
 				{
+					"include": "#keyword"
+				},
+				{
+					"include": "#control_keyword"
+				},
+				{
 					"include": "#single_quote_string"
 				},
 				{
@@ -60,6 +66,14 @@
 					"name": "punctuation.definition.comment.modlite"
 				}
 			}
+		},
+		"keyword": {
+			"name": "keyword.modlite",
+			"match": "\\b(?i)(true|false)\\b"
+		},
+		"control_keyword": {
+			"name": "keyword.control.modlite",
+			"match": "\\b(?i)(function|if|else|switch|while|as|class|var)\\b"
 		},
 		"single_quote_string": {
 			"name": "string.quoted.single.modlite",
