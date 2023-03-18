@@ -1,0 +1,101 @@
+{
+	"name": "modlite",
+	"scopeName": "source.modlite",
+	"patterns": [
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"expression": {
+			"patterns": [
+				{
+					"include": "#single_quote_string"
+				},
+				{
+					"include": "#double_quote_string"
+				},
+				{
+					"include": "#bracket_expression"
+				},
+				{
+					"include": "#paren_expression"
+				}
+			]
+		},
+		"single_quote_string": {
+			"name": "string.quoted.single.modlite",
+
+			"begin": "'",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.modlite"
+				}
+			},
+			"end": "'",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.modlite"
+				}
+			}
+		},
+		"double_quote_string": {
+			"name": "string.quoted.double.modlite",
+
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.modlite"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.modlite"
+				}
+			}
+		},
+		"bracket_expression": {
+			"name": "expression.bracket.group",
+			
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.bracket.open"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.bracket.close"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"paren_expression": {
+			"name": "expression.paren.group",
+			
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.paren.open"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.paren.close"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		}
+	}
+}
