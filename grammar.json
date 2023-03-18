@@ -73,7 +73,7 @@
 		},
 		"control_keyword": {
 			"name": "keyword.control.modlite",
-			"match": "\\b(?i)(function|if|else|switch|while|as|class|var)\\b"
+			"match": "\\b(?i)(function|import|from|if|else|switch|while|as|class|var)\\b"
 		},
 		"single_quote_string": {
 			"name": "string.quoted.single.modlite",
