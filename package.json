@@ -2,6 +2,7 @@
 	"name": "modlite-vscode-extension",
 	"description": "Modlite extension for VS Code",
 	"version": "0.0.1",
+	"publisher": "modlite",
 	"engines": {
 		"vscode": "^1.74.0"
 	},
