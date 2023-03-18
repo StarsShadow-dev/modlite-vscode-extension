@@ -10,6 +10,12 @@
 		"expression": {
 			"patterns": [
 				{
+					"include": "#line_comment"
+				},
+				{
+					"include": "#block_comment"
+				},
+				{
 					"include": "#single_quote_string"
 				},
 				{
@@ -22,6 +28,38 @@
 					"include": "#paren_expression"
 				}
 			]
+		},
+		"line_comment": {
+			"name": "comment.line.modlite",
+
+			"begin": "//",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.modlite"
+				}
+			},
+			"end": "\n",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.modlite"
+				}
+			}
+		},
+		"block_comment": {
+			"name": "comment.block.modlite",
+
+			"begin": "\/[*]",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.modlite"
+				}
+			},
+			"end": "[*](\/)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.modlite"
+				}
+			}
 		},
 		"single_quote_string": {
 			"name": "string.quoted.single.modlite",
