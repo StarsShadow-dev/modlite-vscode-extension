@@ -11,6 +11,9 @@
 		"expression": {
 			"patterns": [
 				{
+					"include": "#function_call"
+				},
+				{
 					"include": "#type"
 				},
 
@@ -42,6 +45,21 @@
 					"include": "#paren_expression"
 				}
 			]
+		},
+		"function_call": {
+			"match": "([a-zA-Z]+)\\s*(\\([\\s\\S]*\\))",
+			"captures": {
+				"1": {
+					"name": "entity.name.function.modlite"
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#expression"
+						}
+					]
+				}
+			}
 		},
 		"type": {
 			"match": "\\:\\s*([a-zA-Z]+)",
