@@ -1,6 +1,7 @@
 {
 	"name": "modlite",
 	"scopeName": "source.modlite",
+
 	"patterns": [
 		{
 			"include": "#expression"
@@ -9,6 +10,10 @@
 	"repository": {
 		"expression": {
 			"patterns": [
+				{
+					"include": "#type"
+				},
+
 				{
 					"include": "#line_comment"
 				},
@@ -20,6 +25,9 @@
 				},
 				{
 					"include": "#control_keyword"
+				},
+				{
+					"include": "#operator"
 				},
 				{
 					"include": "#single_quote_string"
@@ -34,6 +42,14 @@
 					"include": "#paren_expression"
 				}
 			]
+		},
+		"type": {
+			"match": "\\:\\s*([a-zA-Z]+)",
+			"captures": {
+				"1": {
+					"name": "storage.type.modlite"
+				}
+			}
 		},
 		"line_comment": {
 			"name": "comment.line.modlite",
@@ -68,12 +84,16 @@
 			}
 		},
 		"keyword": {
-			"name": "keyword.modlite",
-			"match": "\\b(?i)(true|false)\\b"
+			"name": "keyword.constant.modlite",
+			"match": "\\b(true|false)\\b"
 		},
 		"control_keyword": {
 			"name": "keyword.control.modlite",
-			"match": "\\b(?i)(function|import|from|if|else|switch|while|as|class|var)\\b"
+			"match": "\\b(function|import|from|if|else|switch|while|as|class|var)\\b"
+		},
+		"operator": {
+			"name": "keyword.operator.arithmetic.modlite",
+			"match": "(\\+|\\-|\\*|\\/)"
 		},
 		"single_quote_string": {
 			"name": "string.quoted.single.modlite",
