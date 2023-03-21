@@ -11,6 +11,13 @@
 		"expression": {
 			"patterns": [
 				{
+					"include": "#keyword"
+				},
+				{
+					"include": "#control_keyword"
+				},
+
+				{
 					"include": "#function_call"
 				},
 				{
@@ -22,12 +29,6 @@
 				},
 				{
 					"include": "#block_comment"
-				},
-				{
-					"include": "#keyword"
-				},
-				{
-					"include": "#control_keyword"
 				},
 				{
 					"include": "#operator"
@@ -46,6 +47,15 @@
 				}
 			]
 		},
+		"keyword": {
+			"name": "keyword.constant.modlite",
+			"match": "(true|false)"
+		},
+		"control_keyword": {
+			"name": "keyword.control.modlite",
+			"match": "(function|import|from|if|else|switch|while|as|class|var)"
+		},
+		
 		"function_call": {
 			"match": "([a-zA-Z]+)\\s*(\\([\\s\\S]*\\))",
 			"captures": {
@@ -100,14 +110,6 @@
 					"name": "punctuation.definition.comment.modlite"
 				}
 			}
-		},
-		"keyword": {
-			"name": "keyword.constant.modlite",
-			"match": "\\b(true|false)\\b"
-		},
-		"control_keyword": {
-			"name": "keyword.control.modlite",
-			"match": "\\b(function|import|from|if|else|switch|while|as|class|var)\\b"
 		},
 		"operator": {
 			"name": "keyword.operator.arithmetic.modlite",
