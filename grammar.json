@@ -55,9 +55,9 @@
 			"name": "keyword.control.modlite",
 			"match": "(function|import|from|if|else|switch|while|as|class|var)"
 		},
-		
+
 		"function_call": {
-			"match": "([a-zA-Z]+)\\s*(\\([\\s\\S]*\\))",
+			"match": "\\s+([a-zA-Z][a-zA-Z0-9\\_]+)\\s*(\\([\\s\\S]*\\))",
 			"captures": {
 				"1": {
 					"name": "entity.name.function.modlite"
