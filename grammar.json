@@ -72,7 +72,7 @@
 			}
 		},
 		"type": {
-			"match": "\\:\\s*([a-zA-Z]+)",
+			"match": "[\\:\\!]\\s*([a-zA-Z]+)",
 			"captures": {
 				"1": {
 					"name": "storage.type.modlite"
