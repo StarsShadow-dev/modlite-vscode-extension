@@ -11,6 +11,10 @@
 		"expression": {
 			"patterns": [
 				{
+					"include": "#compilerSetting"
+				},
+
+				{
 					"include": "#keyword"
 				},
 				{
@@ -47,6 +51,11 @@
 				}
 			]
 		},
+		"compilerSetting": {
+			"name": "keyword.control.modlite",
+			"match": "@[a-zA-Z][a-zA-Z0-9\\_]+"
+		},
+
 		"keyword": {
 			"name": "keyword.constant.modlite",
 			"match": "(true|false)"
