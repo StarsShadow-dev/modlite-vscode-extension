@@ -5,12 +5,31 @@ const vscode = require('vscode');
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
+// var statusBarItem
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
 
 	console.log("starting")
+
+	// context.subscriptions.push(vscode.commands.registerCommand("modlite.showSelectionCount", () => {
+	// 	const number = getNumberOfSelectedLines(vscode.window.activeTextEditor);
+	// 	vscode.window.showInformationMessage(`Yeah, ${number} line(s) selected... Keep going!`);
+	// }))
+
+	// statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 999);
+	// statusBarItem.command = "modlite.showSelectionCount";
+	// context.subscriptions.push(statusBarItem);
+
+	// // register some listener that make sure the status bar 
+	// // item always up-to-date
+	// context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(updateStatusBarItem));
+	// context.subscriptions.push(vscode.window.onDidChangeTextEditorSelection(updateStatusBarItem));
+
+	// // update status bar item once at start
+	// updateStatusBarItem();
 
 	/*
 		"commands": [
@@ -33,6 +52,24 @@ function activate(context) {
 
 	// context.subscriptions.push(disposable);
 }
+
+// function updateStatusBarItem() {
+// 	const number = getNumberOfSelectedLines(vscode.window.activeTextEditor);
+// 	if (number > 0) {
+// 		statusBarItem.text = `${number} line(s) selected`;
+// 		statusBarItem.show();
+// 	} else {
+// 		statusBarItem.hide();
+// 	}
+// }
+
+// function getNumberOfSelectedLines(editor) {
+// 	let lines = 0;
+// 	if (editor) {
+// 		lines = editor.selections.reduce((prev, curr) => prev + (curr.end.line - curr.start.line), 0);
+// 	}
+// 	return lines;
+// }
 
 // this method is called when your extension is deactivated
 function deactivate() {}
