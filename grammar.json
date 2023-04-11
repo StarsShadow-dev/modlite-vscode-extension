@@ -20,6 +20,9 @@
 				{
 					"include": "#control_keyword"
 				},
+				{
+					"include": "#number"
+				},
 
 				{
 					"include": "#function_call"
@@ -55,7 +58,7 @@
 			"name": "keyword.control.modlite",
 			"match": "@[a-zA-Z_][a-zA-Z0-9\\_]*"
 		},
-
+		
 		"keyword": {
 			"name": "keyword.constant.modlite",
 			"match": "(true|false)"
@@ -63,6 +66,11 @@
 		"control_keyword": {
 			"name": "keyword.control.modlite",
 			"match": "\\s*(function|return|macro|import|from|if|else|switch|while|as|class|var)"
+		},
+
+		"number": {
+			"name": "constant.numeric.modlite",
+			"match": "[0-9]+"
 		},
 
 		"function_call": {
