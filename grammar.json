@@ -65,7 +65,7 @@
 		},
 		"control_keyword": {
 			"name": "keyword.control.modlite",
-			"match": "\\s*(function|return|macro|import|from|if|else|switch|while|as|class|var)"
+			"match": "\\s*(function|return|macro|import|from|if|else|switch|while|as|var)"
 		},
 
 		"number": {
